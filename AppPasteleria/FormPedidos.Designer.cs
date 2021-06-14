@@ -29,15 +29,22 @@ namespace AppPasteleria
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tablePedidos = new System.Windows.Forms.DataGridView();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBtnCancelar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colBtnEnviar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablePedidos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,21 +62,30 @@ namespace AppPasteleria
             // 
             this.tablePedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablePedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cliente,
             this.Producto,
             this.Cantidad,
             this.FechaPedido,
             this.Estado,
             this.PrecioUnitario,
             this.SubTotal,
-            this.Total});
+            this.colBtnCancelar,
+            this.colBtnEnviar});
             this.tablePedidos.Location = new System.Drawing.Point(32, 94);
             this.tablePedidos.Name = "tablePedidos";
-            this.tablePedidos.Size = new System.Drawing.Size(745, 315);
+            this.tablePedidos.Size = new System.Drawing.Size(756, 315);
             this.tablePedidos.TabIndex = 3;
+            this.tablePedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablePedidos_CellContentClick);
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "ClienteNombre";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
             // 
             // Producto
             // 
-            this.Producto.DataPropertyName = "Producto";
+            this.Producto.DataPropertyName = "ProductoNombre";
             this.Producto.HeaderText = "Producto";
             this.Producto.Name = "Producto";
             // 
@@ -82,6 +98,9 @@ namespace AppPasteleria
             // FechaPedido
             // 
             this.FechaPedido.DataPropertyName = "FechaPedido";
+            dataGridViewCellStyle1.Format = "G";
+            dataGridViewCellStyle1.NullValue = null;
+            this.FechaPedido.DefaultCellStyle = dataGridViewCellStyle1;
             this.FechaPedido.HeaderText = "Fecha Pedido";
             this.FechaPedido.Name = "FechaPedido";
             // 
@@ -93,21 +112,41 @@ namespace AppPasteleria
             // 
             // PrecioUnitario
             // 
-            this.PrecioUnitario.DataPropertyName = "PrecioUnitario";
+            this.PrecioUnitario.DataPropertyName = "ProductoPrecio";
+            dataGridViewCellStyle2.Format = "C";
+            dataGridViewCellStyle2.NullValue = null;
+            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle2;
             this.PrecioUnitario.HeaderText = "Precio Unitario";
             this.PrecioUnitario.Name = "PrecioUnitario";
             // 
             // SubTotal
             // 
             this.SubTotal.DataPropertyName = "SubTotal";
+            dataGridViewCellStyle3.Format = "C";
+            dataGridViewCellStyle3.NullValue = null;
+            this.SubTotal.DefaultCellStyle = dataGridViewCellStyle3;
             this.SubTotal.HeaderText = "Sub Total";
             this.SubTotal.Name = "SubTotal";
             // 
-            // Total
+            // colBtnCancelar
             // 
-            this.Total.DataPropertyName = "Total";
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.colBtnCancelar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colBtnCancelar.HeaderText = "Cancelar";
+            this.colBtnCancelar.Name = "colBtnCancelar";
+            this.colBtnCancelar.Text = "Cancelar";
+            // 
+            // colBtnEnviar
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lime;
+            this.colBtnEnviar.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colBtnEnviar.HeaderText = "Enviar";
+            this.colBtnEnviar.Name = "colBtnEnviar";
+            this.colBtnEnviar.Text = "Enviar";
             // 
             // FormPedidos
             // 
@@ -118,6 +157,7 @@ namespace AppPasteleria
             this.Controls.Add(this.lblTitulo);
             this.Name = "FormPedidos";
             this.Text = "           ";
+            this.Load += new System.EventHandler(this.FormPedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablePedidos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,12 +168,14 @@ namespace AppPasteleria
 
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView tablePedidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaPedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewButtonColumn colBtnCancelar;
+        private System.Windows.Forms.DataGridViewButtonColumn colBtnEnviar;
     }
 }

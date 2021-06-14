@@ -21,25 +21,17 @@ namespace AppPasteleria.cs
         public DateTime FechaSalida { get => fechaSalida; set => fechaSalida = value; }
         public char Estado { get => estado; set => estado = value; }
 
-        // Gloabl | Registrar un pedido
-        public Pedido(I producto, Cliente cliente, int cantidad)
-        {
-            this.Producto = producto;
-            this.Cliente = cliente;
-            this.Cantidad = cantidad;
-            this.fechaPedido = new DateTime();
-            this.Estado = ESTADO_PENDIENTE;
-        }
-
         public Pedido()
         {
+            this.fechaPedido = DateTime.Now;
+            this.Estado = ESTADO_PENDIENTE;
         }
 
         // Enviar pedido
         public void enviar()
         {
             this.Estado = ESTADO_ENVIADO;
-            this.fechaSalida = new DateTime();
+            this.fechaSalida = DateTime.Now;
         }
 
         // Cancelar pedido
@@ -72,10 +64,11 @@ namespace AppPasteleria.cs
         #region Para_Tablas
 
         public string ClienteNombre => this.Cliente.Nombre + " - " + this.Cliente.Direccion;
-
         public string ProductoNombre => this.Producto.Nombre;
-
         public float ProductoPrecio => this.Producto.Precio;
+        public bool IsPendiente => this.Estado == ESTADO_PENDIENTE;
+        public bool IsCancelado => this.Estado == ESTADO_CANCELADO;
+        public bool IsEnviado => this.Estado == ESTADO_ENVIADO;
 
         // Get precio * Cantidad
         public float SubTotal => this.Producto.Precio * this.Cantidad;

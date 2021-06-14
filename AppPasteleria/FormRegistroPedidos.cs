@@ -26,6 +26,8 @@ namespace AppPasteleria
 
             tablaPasteles.AutoGenerateColumns = false;
             tablaPasteles.DataSource = Data.pasteles;
+
+            this.actualizaPedidos();
         }
 
         private void listClientes_SelectedValueChanged(object sender, System.EventArgs e)

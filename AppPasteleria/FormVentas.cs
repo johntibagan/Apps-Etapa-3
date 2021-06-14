@@ -1,11 +1,6 @@
-﻿using System;
+﻿using AppPasteleria.cs;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPasteleria
@@ -15,6 +10,20 @@ namespace AppPasteleria
         public FormVentas()
         {
             InitializeComponent();
+        }
+
+        private void FormVentas_Load(object sender, EventArgs e)
+        {
+            actualizarTabla();
+        }
+
+        public void actualizarTabla()
+        {
+            tableVentas.AutoGenerateColumns = false;
+            tableVentas.DataSource = new List<Pedido<Pastel>>();
+            tableVentas.DataSource = Data.pedidos.FindAll(p => p.IsEnviado);
+            tableVentas.Update();
+            tableVentas.Refresh();
         }
     }
 }
