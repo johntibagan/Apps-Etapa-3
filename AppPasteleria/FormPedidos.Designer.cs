@@ -134,19 +134,21 @@ namespace AppPasteleria
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.NullValue = "Cancelar";
             this.colBtnCancelar.DefaultCellStyle = dataGridViewCellStyle4;
             this.colBtnCancelar.HeaderText = "Cancelar";
             this.colBtnCancelar.Name = "colBtnCancelar";
-            this.colBtnCancelar.Text = "Cancelar";
+            this.colBtnCancelar.Text = "";
             // 
             // colBtnEnviar
             // 
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle5.NullValue = "Enviar";
             this.colBtnEnviar.DefaultCellStyle = dataGridViewCellStyle5;
             this.colBtnEnviar.HeaderText = "Enviar";
             this.colBtnEnviar.Name = "colBtnEnviar";
-            this.colBtnEnviar.Text = "Enviar";
+            this.colBtnEnviar.Text = "";
             // 
             // FormPedidos
             // 
