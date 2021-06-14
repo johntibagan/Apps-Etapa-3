@@ -12,22 +12,24 @@ namespace AppPasteleria
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            this.Close();
         }
 
-        private void btnPedido_Click(object sender, EventArgs e)
+        private void btnRegistrarPedido_Click(object sender, EventArgs e)
         {
-
+            using (FormRegistroPedidos formRegistroPedidos = new FormRegistroPedidos())
+                formRegistroPedidos.ShowDialog();
         }
 
-        private void lblProductos_Click(object sender, EventArgs e)
+        private void lblPedidos_Click(object sender, EventArgs e)
         {
-
+            using (FormPedidos formPedidos = new FormPedidos())
+                formPedidos.ShowDialog();
         }
-
         private void btnVentas_Click(object sender, EventArgs e)
         {
-
+            using (FormVentas formVentas = new FormVentas())
+                formVentas.ShowDialog();
         }
     }
 }

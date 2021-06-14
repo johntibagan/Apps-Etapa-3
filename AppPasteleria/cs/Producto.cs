@@ -5,9 +5,9 @@ namespace AppPasteleria.cs
 {
     class Producto : CantidadAbtractClass
     {
-        private String nombre;
-        private String sabor;
-        private String decoracion;
+        // ID
+        private string codigo;
+        private string nombre;
         private float precio;
 
         public Producto()
@@ -15,9 +15,9 @@ namespace AppPasteleria.cs
             this.Precio = 0;
         }
 
+        public string Codigo { get => codigo; set => codigo = value; }
         public string Nombre { get => nombre; set => nombre = value; }
-        public string Sabor { get => sabor; set => sabor = value; }
-        public string Decoracion { get => decoracion; set => decoracion = value; }
+
         public float Precio
         {
             get => precio;
@@ -32,10 +32,10 @@ namespace AppPasteleria.cs
             this.Cantidad--;
         }
 
-        // Get precio * Cantidad
-        public float subTotal()
+        public override bool Equals(object obj)
         {
-            return this.Precio * this.Cantidad;
+            return obj is Producto producto &&
+                   codigo == producto.codigo;
         }
     }
 }
