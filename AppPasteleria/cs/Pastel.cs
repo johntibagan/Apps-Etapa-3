@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AppPasteleria.cs
+﻿namespace AppPasteleria.cs
 {
     class Pastel : Producto
     {

@@ -51,10 +51,11 @@ namespace AppPasteleria
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(348, 38);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Blue;
+            this.lblTitulo.Location = new System.Drawing.Point(461, 44);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(66, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(73, 20);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Pedidos";
             // 
@@ -73,7 +74,7 @@ namespace AppPasteleria
             this.colBtnEnviar});
             this.tablePedidos.Location = new System.Drawing.Point(32, 94);
             this.tablePedidos.Name = "tablePedidos";
-            this.tablePedidos.Size = new System.Drawing.Size(756, 315);
+            this.tablePedidos.Size = new System.Drawing.Size(942, 315);
             this.tablePedidos.TabIndex = 3;
             this.tablePedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablePedidos_CellContentClick);
             // 
@@ -154,7 +155,7 @@ namespace AppPasteleria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(990, 450);
             this.Controls.Add(this.tablePedidos);
             this.Controls.Add(this.lblTitulo);
             this.Name = "FormPedidos";

@@ -34,7 +34,6 @@ namespace AppPasteleria
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableVentas = new System.Windows.Forms.DataGridView();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +41,7 @@ namespace AppPasteleria
             this.FechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tableVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,16 +60,6 @@ namespace AppPasteleria
             this.tableVentas.Name = "tableVentas";
             this.tableVentas.Size = new System.Drawing.Size(745, 315);
             this.tableVentas.TabIndex = 5;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(344, 40);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(60, 20);
-            this.lblTitulo.TabIndex = 4;
-            this.lblTitulo.Text = "Ventas";
             // 
             // Cliente
             // 
@@ -124,6 +114,17 @@ namespace AppPasteleria
             this.SubTotal.DefaultCellStyle = dataGridViewCellStyle4;
             this.SubTotal.HeaderText = "Sub Total";
             this.SubTotal.Name = "SubTotal";
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblTitulo.Location = new System.Drawing.Point(360, 45);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(66, 20);
+            this.lblTitulo.TabIndex = 4;
+            this.lblTitulo.Text = "Ventas";
             // 
             // FormVentas
             // 
