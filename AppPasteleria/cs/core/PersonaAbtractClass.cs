@@ -1,5 +1,8 @@
 ﻿using System;
-
+/**
+ * @author  John Tibagan
+ * @code    1002709915
+ */
 namespace AppPasteleria.cs.core
 {
     abstract class PersonaAbtractClass

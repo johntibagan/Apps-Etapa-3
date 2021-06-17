@@ -1,6 +1,9 @@
 ﻿using AppPasteleria.cs.core;
 using System;
-
+/**
+ * @author  John Tibagan
+ * @code    1002709915
+ */
 namespace AppPasteleria.cs
 {
     class Cliente : PersonaAbtractClass

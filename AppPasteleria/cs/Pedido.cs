@@ -1,6 +1,9 @@
 ﻿using System;
 using AppPasteleria.cs.core;
-
+/**
+ * @author  John Tibagan
+ * @code    1002709915
+ */
 namespace AppPasteleria.cs
 {
     class Pedido<I> : CantidadAbtractClass where I : Producto

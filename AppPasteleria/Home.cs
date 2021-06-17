@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
-
+/**
+ * @author  John Tibagan
+ * @code    1002709915
+ */
 namespace AppPasteleria
 {
     public partial class Home : Form
@@ -30,6 +33,11 @@ namespace AppPasteleria
         {
             using (FormVentas formVentas = new FormVentas())
                 formVentas.ShowDialog();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

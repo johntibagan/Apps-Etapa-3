@@ -1,5 +1,8 @@
 ﻿using AppContactos.cs.core;
-
+/**
+ * @author  John Tibagan
+ * @code    1002709915
+ */
 namespace AppContactos.cs
 {
     class Contacto : PersonaAbtractClass
